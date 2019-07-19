@@ -1,14 +1,9 @@
 ---
-title: "Can we get htmlwidgets to work?"
 layout: post
-tags:
-- knitr
-- servr
-- httpuv
-- websocket
-categories:
-- jekyll
-- rstats
+title:  Can we get htmlwidgets to work?
+date: `r Sys.time()`
+published: true
+tags: [htmlwidgets, r]
 ---
 
 Let's find out...
