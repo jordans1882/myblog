@@ -7,11 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <title>Serve Jekyll Websites with servr and knitr</title>
-    <meta name="description" content="My super-duper blog
+    <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
 ">
 
-    <link rel="stylesheet" href="//css/main.css">
-    <link rel="canonical" href="https://jordans1882.github.io//2014/09/jekyll-with-knitr.html">
+    <link rel="stylesheet" href="/knitr-jekyll/css/main.css">
+    <link rel="canonical" href="http://yourdomain.com/knitr-jekyll/2014/09/jekyll-with-knitr.html">
 </head>
 
 
@@ -21,7 +21,7 @@
 
   <div class="wrapper">
 
-    <a class="site-title" href="//">My Blog</a>
+    <a class="site-title" href="/knitr-jekyll/">Your awesome title</a>
 
     <nav class="site-nav">
       <a href="#" class="menu-icon">
@@ -35,7 +35,7 @@
       <div class="trigger">
         
           
-          <a class="page-link" href="//about/">About</a>
+          <a class="page-link" href="/knitr-jekyll/about/">About</a>
           
         
           
@@ -93,9 +93,10 @@
 <figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="n">set.seed</span><span class="p">(</span><span class="m">123</span><span class="p">)</span><span class="w">
 </span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rnorm</span><span class="p">(</span><span class="m">40</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">10</span><span class="p">)</span></code></pre></figure>
 
-<figure class="highlight"><pre><code class="language-text" data-lang="text">##  [1]  9.44  9.77 11.56 10.07 10.13 11.72 10.46  8.73  9.31  9.55 11.22 10.36 10.40 10.11  9.44 11.79
-## [17] 10.50  8.03 10.70  9.53  8.93  9.78  8.97  9.27  9.37  8.31 10.84 10.15  8.86 11.25 10.43  9.70
-## [33] 10.90 10.88 10.82 10.69 10.55  9.94  9.69  9.62</code></pre></figure>
+<figure class="highlight"><pre><code class="language-text" data-lang="text">##  [1]  9.44  9.77 11.56 10.07 10.13 11.72 10.46  8.73  9.31  9.55 11.22
+## [12] 10.36 10.40 10.11  9.44 11.79 10.50  8.03 10.70  9.53  8.93  9.78
+## [23]  8.97  9.27  9.37  8.31 10.84 10.15  8.86 11.25 10.43  9.70 10.90
+## [34] 10.88 10.82 10.69 10.55  9.94  9.69  9.62</code></pre></figure>
 
 <figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="c1"># generate a table</span><span class="w">
 </span><span class="n">knitr</span><span class="o">::</span><span class="n">kable</span><span class="p">(</span><span class="n">head</span><span class="p">(</span><span class="n">mtcars</span><span class="p">))</span></code></pre></figure>
@@ -213,36 +214,20 @@
 
 <figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="nf">names</span><span class="p">(</span><span class="n">formals</span><span class="p">(</span><span class="n">servr</span><span class="o">::</span><span class="n">jekyll</span><span class="p">))</span><span class="w">  </span><span class="c1"># arguments of the jekyll() function</span></code></pre></figure>
 
-<figure class="highlight"><pre><code class="language-text" data-lang="text">## [1] "dir"     "input"   "output"  "script"  "serve"   "command" "..."</code></pre></figure>
+<figure class="highlight"><pre><code class="language-text" data-lang="text">## [1] "dir"     "input"   "output"  "script"  "serve"   "command"
+## [7] "..."</code></pre></figure>
 
 <p>Just to test inline R expressions<sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup> in <strong>knitr</strong>, we know the first element in <code class="highlighter-rouge">x</code> (created in the code chunk above) is 9.44. You can certainly draw some graphs as well:</p>
 
 <figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="n">par</span><span class="p">(</span><span class="n">mar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="m">.1</span><span class="p">,</span><span class="w"> </span><span class="m">.1</span><span class="p">))</span><span class="w">
 </span><span class="n">plot</span><span class="p">(</span><span class="n">cars</span><span class="p">,</span><span class="w"> </span><span class="n">pch</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">19</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'red'</span><span class="p">)</span><span class="w">  </span><span class="c1"># a scatterplot</span></code></pre></figure>
 
-<p><img src="/figure/source/jekyll-with-knitr/2014-09-28-jekyll-with-knitr/cars-1.png" alt="A scatterplot of the cars data" /></p>
+<p><img src="/knitr-jekyllfigure/source/jekyll-with-knitr/2014-09-28-jekyll-with-knitr/cars-1.png" alt="A scatterplot of the cars data" /></p>
 
 <h2 id="the-build-script">The build script</h2>
 
 <p>Zero-configuration is required for <code class="highlighter-rouge">servr::jekyll()</code> to work on your Jekyll website. However, there is always demand for more control over some options, which can be defined in a custom build script. Here are the arguments of <code class="highlighter-rouge">servr::jekyll()</code>:</p>
 
-<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="n">jekyll</span><span class="p">(</span><span class="n">dir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"."</span><span class="p">,</span><span class="w"> </span><span class="n">input</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"."</span><span class="p">,</span><span class="w"> </span><span class="s2">"_source"</span><span class="p">,</span><span class="w"> </span><span class="s2">"_posts"</span><span class="p">),</span><span class="w"> </span><span class="n">output</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"."</span><span class="p">,</span><span class="w"> </span><span class="s2">"_posts"</span><span class="p">,</span><span class="w"> </span><span class="s2">"_posts"</span><span class="p">),</span><span class="w">
-    </span><span class="n">script</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"Makefile"</span><span class="p">,</span><span class="w"> </span><span class="s2">"build.R"</span><span class="p">),</span><span class="w"> </span><span class="n">serve</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="n">command</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"jekyll build"</span><span class="p">,</span><span class="w"> </span><span class="n">...</span><span class="p">)</span></code></pre></figure>
-
-<p>By default, <code class="highlighter-rouge">jekyll()</code> looks for <code class="highlighter-rouge">.Rmd</code> files under the root directory, the <code class="highlighter-rouge">_source</code> directory, and the <code class="highlighter-rouge">_posts</code> directory of the Jekyll website. For example, if you put your R Markdown posts under <code class="highlighter-rouge">_source</code>, they will be compiled to the <code class="highlighter-rouge">_posts</code> directory<sup id="fnref:3"><a href="#fn:3" class="footnote">3</a></sup>.</p>
-
-<p>The <code class="highlighter-rouge">script</code> argument specifies a Makefile or an R script to be used to compile your R Markdown files. If it is a Makefile, <code class="highlighter-rouge">jekyll()</code> will run <code class="highlighter-rouge">make -q</code> to see if the site needs to be recompiled, then <code class="highlighter-rouge">make</code> if it does. If the script is an R script, say, named <code class="highlighter-rouge">build.R</code>, it is called via command line of the form</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Rscript build.R arg1 arg2
-</code></pre></div></div>
-
-<p>See <code class="highlighter-rouge">?servr::jekyll</code> for more details. You can define all your <strong>knitr</strong> options and any other options in this R script. See the script <a href="https://github.com/yihui/knitr-jekyll/blob/gh-pages/build.R">build.R</a> in the knitr-jekyll repository for an example: it will automatically set up the output renderers for <strong>knitr</strong>, e.g., when the Jekyll Markdown engine is <code class="highlighter-rouge">kramdown</code>, this script will call <code class="highlighter-rouge">knitr::render_jekyll()</code> so that the code chunk output will be put inside the Liquid tag <code class="highlighter-rouge">{% highlight lang %} {% endhighlight %}</code>; it also sets up some <strong>knitr</strong> chunk and package options so that figures can be displayed correctly. For those who do not wish to store images in GIT (because normally they are binary files), you may check out how I host my images in Dropbox for this repository (see the code below <code class="highlighter-rouge">Sys.getenv('USER') == 'yihui'</code>).</p>
-
-<h2 id="on-the-markdown-renderers">On the Markdown renderers</h2>
-
-<p>Jekyll supports a number of Markdown renderers, such as kramdown, redcarpet, rdiscount, and so on. At the moment, it is a little annoying that kramdown supports LaTeX math expressions via <code class="highlighter-rouge">$$ math $$</code><sup id="fnref:4"><a href="#fn:4" class="footnote">4</a></sup>, but does not support syntax highlighting of code blocks using the three backticks syntax (you must write the awkward Liquid tags); on the other hand, redcarpet does not support LaTeX math but does support three backticks. In my opinion, all the different flavors and implementations of Markdown is the biggest problem of Markdown, since there is not an unambiguous spec for Markdown. <a href="http://commonmark.org">CommonMark</a> looks like a promising project to set up a common spec for Markdown, and <a href="http://johnmacfarlane.net/pandoc/">Pandoc</a> is a great implementation that has brought almost all the features that you may ever need in Markdown. You may find some Pandoc plugins for Jekyll by searching online. However, GitHub Pages does not support arbitrary Jekyll plugins, so you cannot just use a Pandoc plugin there, but that does not mean you cannot use Pandoc locally, nor does it mean you cannot push locally compiled HTML pages to GitHub Pages<sup id="fnref:5"><a href="#fn:5" class="footnote">5</a></sup>.</p>
-
-<p>I’d love you to <a href="https://github.com/yihui/knitr-jekyll">fork</a> this repository, make some (hopefully minor) changes, and <a href="https://github.com/yihui/knitr-jekyll/issues">let me know</a> your success of using Pandoc with Jekyll. Happy hacking, and good luck!</p>
 <div class="footnotes">
   <ol>
     <li id="fn:1">
@@ -250,15 +235,6 @@
     </li>
     <li id="fn:2">
       <p>The syntax in R Markdown for inline expressions is <code class="highlighter-rouge">`r code`</code>, where <code class="highlighter-rouge">code</code> is the R expression that you want to evaluate, e.g. <code class="highlighter-rouge">x[1]</code>. <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
-    </li>
-    <li id="fn:3">
-      <p>The reason that we may need to write R Markdown posts in <code class="highlighter-rouge">_source</code> instead of <code class="highlighter-rouge">_posts</code> is that Jekyll has <a href="https://github.com/jekyll/jekyll/pull/3147">a subtle bug</a> (fixed in v2.5.3): its variable <code class="highlighter-rouge">site.posts</code> will count <code class="highlighter-rouge">.Rmd</code> files under <code class="highlighter-rouge">_posts</code> as well. The consequence is, if you list all the posts of your website, the post <code class="highlighter-rouge">_posts/yyyy-mm-dd-foo.md</code> will show up twice due to the existence of <code class="highlighter-rouge">_posts/yyyy-mm-dd-foo.Rmd</code>, therefore I would recommend you to put your R Markdown posts in a separate directory, such as <code class="highlighter-rouge">_source</code>. <a href="#fnref:3" class="reversefootnote">&#8617;</a></p>
-    </li>
-    <li id="fn:4">
-      <p>Unfortunately, kramdown does not support math expressions in single dollars, e.g. <code class="highlighter-rouge">$ \alpha $</code>. <a href="#fnref:4" class="reversefootnote">&#8617;</a></p>
-    </li>
-    <li id="fn:5">
-      <p>If you choose to generate your Jekyll website locally, and push the HTML files to GitHub, you will need the file <a href="https://help.github.com/articles/using-jekyll-with-pages"><code class="highlighter-rouge">.nojekyll</code></a> in the root directory of your website. <a href="#fnref:5" class="reversefootnote">&#8617;</a></p>
     </li>
   </ol>
 </div>
@@ -278,13 +254,13 @@
 
   <div class="wrapper">
 
-    <h2 class="footer-heading">My Blog</h2>
+    <h2 class="footer-heading">Your awesome title</h2>
 
     <div class="footer-col-wrapper">
       <div class="footer-col  footer-col-1">
         <ul class="contact-list">
-          <li>My Blog</li>
-          <li><a href="mailto:jordan.schupbach@montana.edu">jordan.schupbach@montana.edu</a></li>
+          <li>Your awesome title</li>
+          <li><a href="mailto:your-email@domain.com">your-email@domain.com</a></li>
         </ul>
       </div>
 
@@ -292,21 +268,21 @@
         <ul class="social-media-list">
           
           <li>
-            <a href="https://github.com/jordans1882">
+            <a href="https://github.com/jekyll">
               <span class="icon  icon--github">
                 <svg viewBox="0 0 16 16">
                   <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
                 </svg>
               </span>
 
-              <span class="username">jordans1882</span>
+              <span class="username">jekyll</span>
             </a>
           </li>
           
 
           
           <li>
-            <a href="https://twitter.com/jordans1882">
+            <a href="https://twitter.com/jekyllrb">
               <span class="icon  icon--twitter">
                 <svg viewBox="0 0 16 16">
                   <path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809
@@ -314,7 +290,7 @@
                 </svg>
               </span>
 
-              <span class="username">jordans1882</span>
+              <span class="username">jekyllrb</span>
             </a>
           </li>
           
@@ -322,7 +298,7 @@
       </div>
 
       <div class="footer-col  footer-col-3">
-        <p class="text">My super-duper blog
+        <p class="text">Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
 </p>
       </div>
     </div>
