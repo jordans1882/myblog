@@ -12,9 +12,9 @@ echo ${TRAVIS_REPO_SLUG}
 git config --global user.email "jordans1882@gmail.com"
 git config --global user.name "Jordan Schupbach"
 
-git clone -b gh-pages https://${GITHUB_PAT}@github.com/${TRAVIS_REPO_SLUG}.git book-output
-cd book-output
-cp -r ../_book/* ./
+git clone -b gh-pages https://${GITHUB_PAT}@github.com/${TRAVIS_REPO_SLUG}.git site-output
+cd site-output
+cp -r ../_site/* ./
 git add --all *
-git commit -m "Update the book" || true
+git commit -m "Deploy update of the site" || true
 git push -q origin gh-pages

@@ -1,8 +1,6 @@
-tags
-.Rproj.user
 .Rhistory
-.RData
-_publish.R
-_book
-_bookdown_files
-rsconnect
+tags
+_site
+.sass-cache
+.jekyll-metadata
+.Rproj.user
