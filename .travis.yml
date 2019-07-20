@@ -7,6 +7,7 @@ before_install:
   - gem install jekyll bundler
   - gem install minitest
   - gem install thread_safe
+  - gem install tzinfo
 
 before_script:
   - chmod +x ./_build.sh
