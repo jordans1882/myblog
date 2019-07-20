@@ -6,6 +6,7 @@ before_install:
   - sudo apt-get install ruby-full build-essential zlib1g-dev
   - gem install jekyll bundler
   - gem install minitest
+  - gem install thread_safe
 
 before_script:
   - chmod +x ./_build.sh
