@@ -17,32 +17,20 @@ Credits: http://jordans1882.github.io/disclosure
 
 <title>
   
-     &middot; Student's Statistics Blog
+    My First Post: The Humble Scatterplot &middot; Student's Statistics Blog
   
 </title>
 
 <!-- Search Engine Optimization -->
-<meta name="description" content="
+<meta name="description" content="This is my first post. Naturally, I will give a scatterplot of the iris dataset.
 
-  Posts
-
-  
-    {% for post in site.posts %}
-      
-        {{ post.date | date: "%b %-d, %Y" }}
-
-        
-          {{ post.title }}
-        
-      
-    {% endfor %}
-  
-
-  subscribe via RSS
+data(iris)
+require(car)
+scatterplot(iris$Petal.Length, iris$Petal.Width,groups = iris$Species)
 
 
 ">
-
+<meta name="keywords" content="knitr, servr, httpuv, websocket">
 
 
 
@@ -54,24 +42,12 @@ Credits: http://jordans1882.github.io/disclosure
 <meta name="twitter:image" content="/images/sitelogo.png">
 
 
-<meta name="twitter:title" content="Student's Statistics Blog">
-<meta name="twitter:description" content="
+<meta name="twitter:title" content="My First Post: The Humble Scatterplot">
+<meta name="twitter:description" content="This is my first post. Naturally, I will give a scatterplot of the iris dataset.
 
-  Posts
-
-  
-    {% for post in site.posts %}
-      
-        {{ post.date | date: "%b %-d, %Y" }}
-
-        
-          {{ post.title }}
-        
-      
-    {% endfor %}
-  
-
-  subscribe via RSS
+data(iris)
+require(car)
+scatterplot(iris$Petal.Length, iris$Petal.Width,groups = iris$Species)
 
 
 ">
@@ -81,28 +57,16 @@ Credits: http://jordans1882.github.io/disclosure
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Student's Statistics Blog">
-<meta property="og:description" content="
+<meta property="og:title" content="My First Post: The Humble Scatterplot">
+<meta property="og:description" content="This is my first post. Naturally, I will give a scatterplot of the iris dataset.
 
-  Posts
-
-  
-    {% for post in site.posts %}
-      
-        {{ post.date | date: "%b %-d, %Y" }}
-
-        
-          {{ post.title }}
-        
-      
-    {% endfor %}
-  
-
-  subscribe via RSS
+data(iris)
+require(car)
+scatterplot(iris$Petal.Length, iris$Petal.Width,groups = iris$Species)
 
 
 ">
-<meta property="og:url" content="http://jordans1882.github.io/">
+<meta property="og:url" content="http://jordans1882.github.io/2016/05/my-first-post.html">
 <meta property="og:site_name" content="Student's Statistics Blog">
 
 <meta property="og:image" content="/images/sitelogo.png">
@@ -146,7 +110,7 @@ Credits: http://jordans1882.github.io/disclosure
 <link rel="icon" type="image/png" sizes="192x192"  href="http://jordans1882.github.io/images/icons/android-icon-192x192.png">
 
 
-<link rel="canonical" href="http://jordans1882.github.io/">
+<link rel="canonical" href="http://jordans1882.github.io/2016/05/my-first-post.html">
 <link rel="author" href="https://plus.google.com/100787760072397426955?rel=author">
 
 <!-- RSS -->
@@ -179,7 +143,7 @@ Credits: http://jordans1882.github.io/disclosure
 
     
             
-                    <a class="sidebar-nav-item active" href="http://jordans1882.github.io/"><i class="iconside iconm-home"></i> Home</a>
+                    <a class="sidebar-nav-item" href="http://jordans1882.github.io/"><i class="iconside iconm-home"></i> Home</a>
                 
     
             
@@ -240,57 +204,121 @@ Search box will show up here if Google Custom Search key is set in <code>_config
       </div>
 
       <div class="container content">
-        <div class="home">
-
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
+        <div class="post">
+  <h1 itemprop="name" class="post-title">My First Post: The Humble Scatterplot</h1>
+  <span class="post-date" itemprop="datePublished" content="2016-05-20"><i class="fa fa-calendar" title="Date published"> <a class="permalink" href="http://jordans1882.github.io/2016/05/my-first-post.html" itemprop="url" title="Permanent link to this post">20 May 2016</a> </i></span>
+  
+  <span class="post-tags" itemprop="keywords" content="knitr, servr, httpuv, and websocket"><i class="fa fa-tags" title="page tags"></i> <a href="http://jordans1882.github.io/tags/#knitr" title="Pages tagged knitr" rel="tag">knitr</a> &bull;  <a href="http://jordans1882.github.io/tags/#servr" title="Pages tagged servr" rel="tag">servr</a> &bull;  <a href="http://jordans1882.github.io/tags/#httpuv" title="Pages tagged httpuv" rel="tag">httpuv</a> &bull;  <a href="http://jordans1882.github.io/tags/#websocket" title="Pages tagged websocket" rel="tag">websocket</a></span>
     
-      <li>
-        <span class="post-meta">Jul 20, 2019</span>
+      <span class="social-icons"><a href="https://twitter.com/share?text=My First Post: The Humble Scatterplot&amp;url=http://jordans1882.github.io/2016/05/my-first-post.html&amp;via=jordans1882"  class="social-icons" target="_blank" title="Share on twitter"> <i class="fa fa-twitter meta"></i></a>
+<a href="https://plus.google.com/share?url=http://jordans1882.github.io/2016/05/my-first-post.html"  class="social-icons" target="_blank" title="Share on Google+"> <i class="fa fa-google-plus"></i></a>
+<a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://jordans1882.github.io/2016/05/my-first-post.html"  class="social-icons" target="_blank" title="Share on LinkedIn"> <i class="fa fa-linkedin"></i></a>
 
-        <h2>
-          <a class="post-link" href="/myblog//2019/07/new-post.html">Can we get htmlwidgets to work?</a>
-        </h2>
-      </li>
+
+<a href="javascript:window.print()" class="social-icons" title="Printer friendly format"><i class="fa fa-print"></i></a>
+</span>
+
     
-      <li>
-        <span class="post-meta">Jul 18, 2019</span>
+  <p>This is my first post. Naturally, I will give a scatterplot of the iris dataset.</p>
 
-        <h2>
-          <a class="post-link" href="/myblog//2019/07/iris-lda-analysis.html">Iris Datases</a>
-        </h2>
-      </li>
+<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="n">data</span><span class="p">(</span><span class="n">iris</span><span class="p">)</span><span class="w">
+</span><span class="n">require</span><span class="p">(</span><span class="n">car</span><span class="p">)</span><span class="w">
+</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">iris</span><span class="o">$</span><span class="n">Petal.Length</span><span class="p">,</span><span class="w"> </span><span class="n">iris</span><span class="o">$</span><span class="n">Petal.Width</span><span class="p">,</span><span class="n">groups</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">iris</span><span class="o">$</span><span class="n">Species</span><span class="p">)</span></code></pre></figure>
+
+<p><img src="/myblog/figure/source/my-first-post/2016-05-20-my-first-post/plot1-1.png" alt="plot of chunk plot1" /></p>
+
+  <hr>
+  
+  <span class="post-date metafoot" itemprop="datePublished" content="2016-05-20"><i class="fa fa-calendar" title="Date published"> <a class="permalink" href="http://jordans1882.github.io/2016/05/my-first-post.html" itemprop="url" title="Permanent link to this post">20 May 2016</a> </i></span>
+  
+  <span class="post-tags" itemprop="keywords" content="knitr, servr, httpuv, and websocket"><i class="fa fa-tags" title="page tags"></i> <a href="http://jordans1882.github.io/tags/#knitr" title="Pages tagged knitr" rel="tag">knitr</a> &bull;  <a href="http://jordans1882.github.io/tags/#servr" title="Pages tagged servr" rel="tag">servr</a> &bull;  <a href="http://jordans1882.github.io/tags/#httpuv" title="Pages tagged httpuv" rel="tag">httpuv</a> &bull;  <a href="http://jordans1882.github.io/tags/#websocket" title="Pages tagged websocket" rel="tag">websocket</a></span>
     
-      <li>
-        <span class="post-meta">May 23, 2016</span>
+      <span class="social-icons"><a href="https://twitter.com/share?text=My First Post: The Humble Scatterplot&amp;url=http://jordans1882.github.io/2016/05/my-first-post.html&amp;via=jordans1882"  class="social-icons" target="_blank" title="Share on twitter"> <i class="fa fa-twitter meta"></i></a>
+<a href="https://plus.google.com/share?url=http://jordans1882.github.io/2016/05/my-first-post.html"  class="social-icons" target="_blank" title="Share on Google+"> <i class="fa fa-google-plus"></i></a>
+<a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://jordans1882.github.io/2016/05/my-first-post.html"  class="social-icons" target="_blank" title="Share on LinkedIn"> <i class="fa fa-linkedin"></i></a>
 
-        <h2>
-          <a class="post-link" href="/myblog//2016/05/skynet-becomes-aware.html">Skynet Becomes Aware</a>
-        </h2>
-      </li>
+
+<a href="javascript:window.print()" class="social-icons" title="Printer friendly format"><i class="fa fa-print"></i></a>
+</span>
+
     
-      <li>
-        <span class="post-meta">May 20, 2016</span>
-
-        <h2>
-          <a class="post-link" href="/myblog//2016/05/my-first-post.html">My First Post: The Humble Scatterplot</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Sep 28, 2014</span>
-
-        <h2>
-          <a class="post-link" href="/myblog//2014/09/jekyll-with-knitr.html">Serve Jekyll Websites with servr and knitr</a>
-        </h2>
-      </li>
-    
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="/myblog//feed.xml">via RSS</a></p>
-
 </div>
+
+
+  <div class="printMsg">
+<table>
+  <thead>
+    <tr>
+      <th><i class="fa fa-twitter">@jordans1882</i></th>
+      <th>QR code</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><i class="fa fa-anchor"> http://jordans1882.github.io/2016/05/my-first-post.html</i><br /><i class="fa fa-calendar"> 20-May-16</i><br /><i class="fa fa-creative-commons"> BY-NC-SA 4.0 http://jordans1882.github.io/disclosure</i></td>
+      <td><img src="https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl=http://jordans1882.github.io/2016/05/my-first-post.html&choe=UTF-8" alt="http://jordans1882.github.io/2016/05/my-first-post.html" /></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+<div class="page-break"></div>
+<div class="related">
+  <h2>Related Posts</h2>
+<ul>
+  
+     
+       
+        
+       
+        
+       
+        
+       
+        
+      
+    
+  
+     
+       
+        
+          <li><a href="http://jordans1882.github.io/2019/07/iris-lda-analysis.html">Iris Datases</a><br /></li>
+          
+    
+  
+     
+       
+        
+          <li><a href="http://jordans1882.github.io/2016/05/skynet-becomes-aware.html">Skynet Becomes Aware</a><br /></li>
+          
+    
+  
+    
+  
+     
+       
+        
+          <li><a href="http://jordans1882.github.io/2014/09/jekyll-with-knitr.html">Serve Jekyll Websites with servr and knitr</a><br /></li>
+          
+    
+  
+</ul>
+</div>
+
+<div class="prevnext">
+  
+    <a class="prevnext-item older" href="http://jordans1882.github.io/2014/09/jekyll-with-knitr.html" title="Serve Jekyll Websites with servr and knitr">Older</a>
+  
+  
+    <a class="prevnext-item older" href="http://jordans1882.github.io/2016/05/skynet-becomes-aware.html" title="Skynet Becomes Aware">Newer</a>
+  
+</div>
+
+<div class="page-break"></div>
+
+
 
                     <div class="custom-footer" style="display: block;">
             <div class="footer-social-icons">
