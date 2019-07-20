@@ -301,15 +301,15 @@ Tables
 Figures
 -------
 
-<img src="/figure/source/iris-lda-analysis/2019-07-18-iris-lda-analysis/irises-1.png" title="Three species of iris: I. Setosa, I. Virginica, I. Versicolor" alt="Three species of iris: I. Setosa, I. Virginica, I. Versicolor" style="display: block; margin: auto;" />
+<img src="/myblogfigure/source/iris-lda-analysis/2019-07-18-iris-lda-analysis/irises-1.png" title="Three species of iris: I. Setosa, I. Virginica, I. Versicolor" alt="Three species of iris: I. Setosa, I. Virginica, I. Versicolor" style="display: block; margin: auto;" />
 
-<img src="/figure/source/iris-lda-analysis/2019-07-18-iris-lda-analysis/pairsplot-1.png" title="A matrix of scatterplots of the quantitative variables" alt="A matrix of scatterplots of the quantitative variables" style="display: block; margin: auto;" />
+<img src="/myblogfigure/source/iris-lda-analysis/2019-07-18-iris-lda-analysis/pairsplot-1.png" title="A matrix of scatterplots of the quantitative variables" alt="A matrix of scatterplots of the quantitative variables" style="display: block; margin: auto;" />
 
-<img src="/figure/source/iris-lda-analysis/2019-07-18-iris-lda-analysis/histograms-1.png" title="Histograms of covariates separated by species" alt="Histograms of covariates separated by species" style="display: block; margin: auto;" />
+<img src="/myblogfigure/source/iris-lda-analysis/2019-07-18-iris-lda-analysis/histograms-1.png" title="Histograms of covariates separated by species" alt="Histograms of covariates separated by species" style="display: block; margin: auto;" />
 
-<img src="/figure/source/iris-lda-analysis/2019-07-18-iris-lda-analysis/sep-1.png" title="Beanplots of the four quantitative variables by species" alt="Beanplots of the four quantitative variables by species" style="display: block; margin: auto;" />
+<img src="/myblogfigure/source/iris-lda-analysis/2019-07-18-iris-lda-analysis/sep-1.png" title="Beanplots of the four quantitative variables by species" alt="Beanplots of the four quantitative variables by species" style="display: block; margin: auto;" />
 
-<img src="/figure/source/iris-lda-analysis/2019-07-18-iris-lda-analysis/scores-1.png" title="Linear discriminant scores for setosa and versicolor" alt="Linear discriminant scores for setosa and versicolor" style="display: block; margin: auto;" />
+<img src="/myblogfigure/source/iris-lda-analysis/2019-07-18-iris-lda-analysis/scores-1.png" title="Linear discriminant scores for setosa and versicolor" alt="Linear discriminant scores for setosa and versicolor" style="display: block; margin: auto;" />
 
 R-code
 ------
