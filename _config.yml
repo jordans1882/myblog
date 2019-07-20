@@ -1,15 +1,107 @@
 # Site settings
-title: Your awesome title
-email: your-email@domain.com
+title: Student's Statistics Blog
+email: jordans1882@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
 baseurl: "/myblog/" # the subpath of your site, e.g. /blog/
 url: "http://jordans1882.github.io" # the base hostname & protocol for your site
-twitter_username: jekyllrb
-github_username:  jekyll
+twitter_username: jordans1882
+github_username:  jordans1882
 permalink: /:year/:month/:title.html
 
 # Build settings
 markdown: kramdown
+
+#tagline:             'foo's website
+urlimg: /images/
+markdown: kramdown
+#paginate: 5
+#paginate_path: "/blog/page:num"
+excerpt_separator: <!--more-->
+default_bg: sitebg.jpg
+default_logo: sitelogo.png
+safe: false
+#timezone:    America/Chicago
+future:      true
+
+plugins:
+  - jekyll-paginate
+  - jemoji
+  - font-awesome-sass
+  - kramdown
+  - rouge
+
+include: [".htaccess"]
+exclude: ["lib", "config.rb", "Gemfile", "Capfile", "Gemfile.lock", "config", "log", "Rakefile", "Rakefile.rb", "rakefile", "README.md", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "LICENSE", "vendor", "assets", "_plugins", "public/dormant"]
+
+# About/contact
+author:
+  name:              Jordan Schupbach
+  url:               https://twitter.com/jordans1882
+  avatar:            foo.png
+  #email:
+
+# Owner/author information
+owner:
+  name:           Jordan Schupbach
+  avatar:         foo.png
+  #email:
+  # Use the coder's toolbox at http://coderstoolbox.net/string/#!encoding=xml&action=encode&charset=us_ascii to encode your description into XML string
+  description:
+  # Social networking links used in footer. Update and remove as you like.
+  twitter:        jordans1882
+  facebook:       jordans1882
+  github:         jordans1882
+  stackexchange:
+  linkedin:
+  instagram:
+  flickr:
+  tumblr:
+  google_plus:    https://plus.google.com/100787760072397426955
+  # orcid and google scholar IDs are different than standard username.
+  orcid:
+  gscholar:
+
+## sidebar links:
+# For external links add external: true
+links:
+  - title: <i class="iconside iconm-home"></i> Home
+    url: /
+  - title: <i class="iconside iconm-user"></i> About
+    url: /about/
+  - title: <i class="iconside iconm-quill"></i> Blog
+    url: /blog/
+  - title: <i class="fa fa-tags"></i> Tags
+    url: /tags/
+  - title: <i class="fa fa-archive"></i> Archive
+    url: /archive/
+    external: true
+  - title: <i class="iconside iconm-envelop"></i> Contact
+    url: /contact/
+  - title: <i class="iconside iconm-twitter"></i> Twitter
+    url: https://twitter.com/jordans1882
+    external: true
+  - title: <i class="iconside iconm-feed2"></i> Feed
+    url: /feed.xml
+
+# Google Custom Search:
+#google_search: xyz123abc
+
+# Twitter stream widget:
+# Replace xyz123abc with your twitter widget id from https://twitter.com/settings/widgets
+#twitter_widget_id: xyz123abc
+
+# Add disqus username for Disqus comment board:
+# disqus_shortname: foo
+
+# Analytics and webmaster tools stuff goes here
+#google_analytics:   xyz123abc
+
+#### For dummy website only - remove if you wish ####
+#github_repo: https://github.com/jordans1882
+#version: 1.1.0
+## END ##
+
+

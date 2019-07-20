@@ -1,0 +1,52 @@
+---
+layout: post
+title: "Skynet Becomes Aware"
+categories: [jekyll, rstats]
+tags: [knitr, servr, httpuv, jekyll]
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+After only a few tests, this blog is officially up and running. With it, skynet has become aware. Actually, for an explanation on how skynet actually became aware, here are some links to some important historical documents:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4DQsG3TKQ0I" frameborder="0" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_Wlsd9mljiU" frameborder="0" allowfullscreen></iframe>
+
+
+
+After writing my first post and settling on some styling decisions, I've decided I should write about how I made this website. To start, I decided to use git pages to host my website. Why? For one, it's free. Second, github plays really nicely with some other software I decided to use, namely, Jekyll. Jekyll is software written in Ruby that converts some simple scripts into a fully functional website written in html and css. 
+
+Next, to streamline integration of R and Jekyll, I used the R package __servr__, written by Yihui Xie. I also started with Yihui's template site [knitr-jekyll](https://github.com/yihui/knitr-jekyll "knitr-jekyll"), which you can find on github. Then, I pulled in some code from a Jekyll template called [lanyon-plus](https://github.com/dyndna/lanyon-plus "lanyon-plus"), which gives the nice sliding sidebar. Last, I used a program called [jekyll-github-deploy](https://github.com/yegor256/jekyll-github-deploy "jekyll-github-deploy") (a.k.a. jgd) to aid in the building the website onto a branch called gh-pages. And that's it. That's all you need to know.
+
+Ok. So I glossed over a little bit. Let's start with what operating system I am running, as it may be relevant as to how this process may be different for you on your machine. My computer is running on Ubuntu 14.04, a debian based linux distribution. 
+
+Ok. Now that we've gotten that out of the way, the first thing to do is to create a github repository to host our website. The name of the repository must be *username.github.io*. Once you have created the repository, anything in the repository is being hosted by github. Note, at this step, you can use one of github's premade jekyll templates. Check out the repository settings for your website repository to see how to do this. 
+
+Now that you have your repository set up, it's time to start building the webpage. Originally, I started with Yihui's template, [knitr-jekyll](https://github.com/yihui/knitr-jekyll "knitr-jekyll"), and then merged it with [lanyon](https://github.com/poole/lanyon "lanyon"). I later decided I liked the [lanyon-plus](https://github.com/dyndna/lanyon-plus "lanyon-plus") template, which I merged and edited until it worked. There are a few kinks I am still working through. Start this process by cloning Yihui's template repository and copy the files over into your website repository. 
+
+Next, you will need to install jekyll. For whatever reason, I had to insall ruby version 2.0 to get jekyll to install (they are now on version 2.3). You can install this [here](https://www.ruby-lang.org/en/downloads/ "here"). Then, I installed jekyll. In Ubuntu, this was as easy as
+
+```{code1, eval=FALSE, echo = TRUE}
+gem install jekyll
+```
+
+After jekyll was installed, I was able to build the webpage. I used RStudio and the __servr__ package to do so. First, I setup an RStudio project in the base directory for the website. Then, I changed the project options to build with a makefile, that should be located in the _source folder. A build tab should then be available, which should allow you to build the project from within RStudio.
+
+Once you have this working, you should probably build your first post. Make a .Rmd file and put it in _source. When the Makefile is run, it will compile the files in _source using the __jekyll__ function out of the __servr__ package, and put the associated .md files into the _posts folder. The jekyll function then hosts your site locally on your computer and brings it up in your browser. The main advantage of this function is that it automatically recompiles when you save your file. That should do it! You now have your own Stats Blog that you can build from .Rnw files. The only thing left is to jazz it up with your favorite Jekyll template (or write your own). I recommend taking a look [here](https://github.com/jekyll/jekyll/wiki/sites "here") to see what is out there. It may take a bit of tinkering, but copying over the relevant css folders (usually in public), the layout folder, and the config.yml are a few things you will likely need to do.  Or, you can just clone my blog to get started. Then, install [jgd](https://github.com/yegor256/jekyll-github-deploy  "jgd") with
+
+```{code2, echo = TRUE, eval = FALSE}
+gem install jgd
+```
+You can then deploy your webpage to git by typing jgd in the root directory for your webpage. Anything in your _site folder will be put onto the gh-pages branch. Thus, your main branch will store the site, and the gh-pages branch will host it. I think that's it.
+
+
+Happy Blogging!
+
+This is a test. This is a test.
+
+
+
+

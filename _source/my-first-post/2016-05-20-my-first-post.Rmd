@@ -1,0 +1,14 @@
+---
+layout: post
+title: "My First Post: The Humble Scatterplot"
+categories: [jekyll, rstats]
+tags: [knitr, servr, httpuv, websocket]
+---
+
+This is my first post. Naturally, I will give a scatterplot of the iris dataset.
+
+```{r plot1, message=FALSE}
+data(iris)
+require(car)
+scatterplot(iris$Petal.Length, iris$Petal.Width,groups = iris$Species)
+```
